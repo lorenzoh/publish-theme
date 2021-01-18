@@ -240,6 +240,8 @@ div.footnote > p.footnote-title {
 
 #menu-toggler {
     cursor: pointer;
+    margin-left: 8px;
+    margin-right: 4px;
 }
 #search-input {
     border: 1px solid #ddd;
@@ -276,18 +278,9 @@ div.footnote > p.footnote-title {
 
 /* # Table of contents container */
 
-/*
-nav#toc {
-    margin-top: 24px;
-    max-width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-*/
-
-#toclarge {
+#toc {
     width: calc(var(--toc-width) - 32px);
+    display: block;
     float: left;
     margin-top: 76px;
     border-right: 1px solid #ddd;
@@ -295,11 +288,11 @@ nav#toc {
     padding-right: 16px;
 }
 
-#toclarge:not(:hover) {
+#toc:not(:hover) {
     opacity: 60%;
 }
 
-#toclarge * {
+#toc * {
     font-family: Charter, serif;
     font-size: 16px;
     font-weight: normal;
@@ -307,33 +300,33 @@ nav#toc {
     text-align: right;
 }
 
-#toclarge ul {
+#toc ul {
     list-style-type: none;
     margin-block-start: 2px;
     margin-block-end: 2px;
     padding-inline-start: 4px;
 }
 
-#toclarge li * {
+#toc li * {
     font-size: 14px;
     line-height: 20px;
 }
 
-#toclarge h1, #toclarge h2, #toclarge h3 {
+#toc h1, #toc h2, #toc h3 {
     font-style: italic;
     margin-block-start: 8px;
     margin-block-end: 4px;
 }
 
-#toclarge h1 a:link, #toclarge h2 a:link, #toclarge h3 a:link {
+#toc h1 a:link, #toc h2 a:link, #toc h3 a:link {
     font-style: italic;
 }
 
-#toclarge h1, #toclarge h2 {
+#toc h1, #toc h2 {
     font-size: 17px;
 }
 
-#toclarge h3 {
+#toc h3 {
     font-size: 15px;
 }
 
@@ -349,6 +342,7 @@ footer {
     color: #aaa;
     width: 300px;
 }
+
 @media (max-width: 1260px) {
     .marginnote {
         float: none;
@@ -359,6 +353,9 @@ footer {
 }
 
 @media (max-width: 760px) {
+    #page {
+        width: 100%;
+    }
     article {
         margin-left: 12px;
         margin-right: 12px;
@@ -377,8 +374,22 @@ footer {
         padding-right: 0px;
     }
 
-    #toclarge {
-        display: none;
+    #toc {
+        width: 90%;
+        margin: 16px 5%;
+        border: none;
+    }
+    #toc * {
+        text-align: left;
+    }
+
+    #toc:not(:hover) {
+        opacity: 100%;
+    }
+
+    footer, #page-navigation {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
