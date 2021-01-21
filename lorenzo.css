@@ -89,6 +89,7 @@ article p, article li, article td, article th {
 article h1, article h2, article h3, article h4, article h5 {
     font-family: 'Charter', serif;
     font-style: italic;
+    font-weight: 300;
     color: #333;
 }
 
